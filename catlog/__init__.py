@@ -4,7 +4,6 @@ author: Zicheng Zeng
 date: 2023/9/26
 description: 
 """
-from flask import Flask
 from werkzeug.middleware.dispatcher import DispatcherMiddleware
 import catlog.frontend_app as frontend
 import catlog.backend_app as backend
