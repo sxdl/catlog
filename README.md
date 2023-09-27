@@ -34,4 +34,4 @@ catlog是项目的根目录
 
 ## 技术方案
 
-flask + mongodb
+flask + layui
