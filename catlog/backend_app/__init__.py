@@ -15,4 +15,10 @@ def create_app(config_name):
     from catlog.backend_app.main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
+    # 初始化数据库
+    from catlog.db import db
+    db.init_app(app)
+    with app.app_context():
+        db.create_all()
+
     return app
