@@ -1,0 +1,10 @@
+{% extends "user/base.html" %}
+{% block title %}{% endblock %}
+{% block css %}{% endblock %}
+{% block body %}
+{{ super() }}
+    <a href="./index">首页</a>
+    <a href="./trends">猫猫动态</a>
+    <a href="./user">用户</a>
+    <a href="./about">关于我们</a>
+{% endblock %}

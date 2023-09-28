@@ -2,7 +2,7 @@
 __init__.py
 author: Zicheng Zeng
 date: 2023/9/26
-description: 后台应用
+description: 后端（API）
 """
 from flask import Flask
 

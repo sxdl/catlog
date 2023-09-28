@@ -1,0 +1,14 @@
+{% extends "manage/base.html" %}
+{% block title %}{% endblock %}
+{% block css %}{% endblock %}
+{% block body %}
+{{ super() }}
+    <a href="/manage/cats">猫猫管理</a>
+    <a href="/manage/trends">动态管理</a>
+    <a href="/manage/activities">活动管理</a>
+    <a href="/manage/tasks">任务管理</a>
+    <a href="/manage/logs">日志管理</a>
+    <a href="/manage/feedbacks">反馈信息</a>
+    <a href="">修改密码</a>
+
+{% endblock %}
