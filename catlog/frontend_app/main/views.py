@@ -9,18 +9,63 @@ from . import main
 from catlog.db import db, User, Role
 
 
-@main.route('/', methods=['GET', 'POST'])
-def index():
-    admin_role = Role(name='Admin')
-    mod_role = Role(name='Moderator')
-    user_role = Role(name='User')
-    user_john = User(username='john', role=admin_role)
-    user_susan = User(username='susan', role=user_role)
-    user_david = User(username='david', role=user_role)
-    db.session.add_all([admin_role, mod_role, user_role, user_john, user_susan, user_david])
-    db.session.commit()
-    print(admin_role.id)
-    print(mod_role.id)
-    print(user_role.id)
-    return render_template('index.html')
+'''
+前台路由
+'''
 
+@main.route('/')
+@main.route('/index')
+def index():
+    return render_template('user/index.html')
+
+
+@main.route('/trends', methods=['GET', 'POST'])
+def trends():
+    return render_template('user/trends_page.html')
+
+
+@main.route('/about', methods=['GET', 'POST'])
+def about():
+    return render_template('user/about_page.html')
+
+
+@main.route('/user', methods=['GET', 'POST'])
+def user():
+    return render_template('user/user_page.html')
+
+
+'''后台路由'''
+@main.route('/manage/', methods=['GET', 'POST'])
+@main.route('/manage', methods=['GET', 'POST'])
+def manage_index():
+    return render_template('manage/index.html')
+
+
+@main.route('/manage/cats', methods=['GET', 'POST'])
+def manage_cats():
+    return render_template('manage/cats_manage.html')
+
+
+@main.route('/manage/trends', methods=['GET', 'POST'])
+def manage_trends():
+    return render_template('manage/trends_manage.html')
+
+
+@main.route('/manage/activities', methods=['GET', 'POST'])
+def manage_activities():
+    return render_template('manage/activities_manage.html')
+
+
+@main.route('/manage/tasks', methods=['GET', 'POST'])
+def manage_tasks():
+    return render_template('manage/tasks_manage.html')
+
+
+@main.route('/manage/logs', methods=['GET', 'POST'])
+def manage_logs():
+    return render_template('manage/logs_manage.html')
+
+
+@main.route('/manage/feedbacks', methods=['GET', 'POST'])
+def manage_feedbacks():
+    return render_template('manage/feedbacks_manage.html')
