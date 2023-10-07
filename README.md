@@ -1,3 +1,6 @@
+<p align="center">
+  <img width="18%" align="center" src="https://raw.githubusercontent.com/sxdl/catlog/catlog/frontend_app/static/img/Cap_CatLog_LOGO_800-800.png" alt="logo">
+</p>
 
 <h1 align="center">
   CatLog——貓皇志
