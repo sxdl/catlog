@@ -59,15 +59,15 @@ init.py文件：定义create_app函数来创建后端
 * front_end前端的代码。
   * main文件夹：
 
-​     			 __init__.py：创建蓝图
+ __init__.py：创建蓝图
 
-​      			errors.py：
+errors.py：
 
-​      			views.py：
+views.py：
 
-​			template文件夹：用于存放后端的html源码。
+template文件夹：用于存放后端的html源码。
 
-​			init.py文件：定义create_app函数来创建前端
+init.py文件：定义create_app函数来创建前端
 
 ##### .py文件：
 
