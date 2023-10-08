@@ -46,15 +46,15 @@ catlog是项目的根目录，其下包含三个文件夹和三个.py文件。
 * back_end后端的代码。
   * main文件夹：
 
-   		  	init.py：创建蓝图
+​    		  	init.py：创建蓝图
 
-     		 	errors.py：
+​      		 	errors.py：
 
-    			 views.py：
+​     			 views.py：
 
-			 template文件夹：用于存放后端的html源码
+​ 			 template文件夹：用于存放后端的html源码
 
-		 	init.py文件：定义create_app函数来创建后端
+​ 		 	init.py文件：定义create_app函数来创建后端
 
 * front_end前端的代码。
   * main文件夹：
