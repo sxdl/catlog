@@ -1,5 +1,9 @@
+
 <p align="center">
-  <img width="70%" align="center" src="https://raw.githubusercontent.com/sxdl/catlog/master/catlog/frontend_app/static/img/Cap_CatLog_LOGO_800-800.png" alt="logo">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sxdl/catlog/master/catlog/frontend_app/static/img/Light_Cap_CatLog_LOGO_800-800.png">
+    <img width="70%" align="center" alt="CatLog Logo" src="https://raw.githubusercontent.com/sxdl/catlog/master/catlog/frontend_app/static/img/Cap_CatLog_LOGO_800-800.png">
+  </picture>
 </p>
 
 <h1 align="center">
