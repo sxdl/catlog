@@ -1,10 +1,34 @@
 {% extends "user/base.html" %}
 {% block title %}{% endblock %}
-{% block css %}{% endblock %}
+{% block css %}
+<!-- 引入 layui.css -->
+<link href="//unpkg.com/layui@2.8.18-rc.1/dist/css/layui.css" rel="stylesheet">
+
+{% endblock %}
 {% block body %}
 {{ super() }}
     <a href="./index">首页</a>
     <a href="./trends">猫猫动态</a>
     <a href="./user">用户</a>
     <a href="./about">关于我们</a>
+
+    <ul class="layui-nav">
+        <li class="layui-nav-item"><a href="javascript:;">首页</a></li>
+        <li class="layui-nav-item"><a href="">猫猫动态</a></li>
+        <li class="layui-nav-item"><a href="">用户</a></li>
+        <li class="layui-nav-item"><a href="">关于我们</a></li>
+        <li class="layui-nav-item" lay-unselect>
+            <a href="javascript:;">
+                <img src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg" class="layui-nav-img">
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">子级菜单</a></dd>
+                <dd><a href="javascript:;">横线隔断</a></dd>
+                <hr>
+                <dd style="text-align: center;"><a href="">退出</a></dd>
+            </dl>
+        </li>
+
+    </ul>
+    <script src="//unpkg.com/layui@2.8.18-rc.1/dist/layui.js"></script>
 {% endblock %}
