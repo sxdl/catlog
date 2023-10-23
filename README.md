@@ -123,6 +123,8 @@ config 字典：方便查看配置信息
 
 flask + layui
 
+https://layui.dev/
+
 
 ## Future
 
