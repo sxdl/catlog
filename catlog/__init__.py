@@ -11,9 +11,13 @@ from catlog.config import config
 
 
 def create_app(config_name):
-    frontend_application = frontend.create_app(config[config_name])
-    backend_application = backend.create_app(config[config_name])
-    application = DispatcherMiddleware(frontend_application, {
-        '/api': backend_application
-    })
-    return application
+    cnfg = config[config_name]
+    frontend_application = frontend.create_app(cnfg)
+    backend_application = backend.create_app(cnfg)
+    if cnfg.BLUEPRINT:
+        application = DispatcherMiddleware(frontend_application, {
+            '/api': backend_application
+        })
+        return application
+    else:
+        return frontend_application, backend_application
