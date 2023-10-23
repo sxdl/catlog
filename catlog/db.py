@@ -48,3 +48,15 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post %r>' % self.title
+
+
+class Cat(db.Model):
+    """
+    临时添加的猫数据表，待完善
+    """
+    __tablename__ = 'cats'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), unique=True)
+
+    def __repr__(self):
+        return '<Cat %r>' % self.name
