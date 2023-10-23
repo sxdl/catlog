@@ -8,6 +8,9 @@ from flask import render_template, redirect, url_for, abort, flash, request, cur
 from . import main
 from catlog.db import db, User, Role
 
+from flask_login import login_required, current_user
+from flask import session
+
 
 '''
 前台路由
@@ -32,6 +35,17 @@ def about():
 @main.route('/user', methods=['GET', 'POST'])
 def user():
     return render_template('user/user_page.html')
+
+# TODO: 不太清楚如何对发布动态进行前后端分离，先在这里写一个实现功能，后面请教之后再改
+@main.route('/post', methods=['GET', 'POST'])
+# @login_required
+def post():
+    if request.method == 'GET':
+        return render_template('user/post_page.html')
+    else:
+        pass
+
+        
 
 
 '''后台路由'''

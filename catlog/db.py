@@ -34,3 +34,17 @@ class Role(db.Model):
 
     def __repr__(self):
         return '<Role %r>' % self.name
+
+
+class Post(db.Model):
+    """已经发布动态的数据库模型"""
+    __tablename__ = 'posts'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(80))
+    content = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime)
+    cat_id = db.Column(db.Integer, db.ForeignKey('cats.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+
+    def __repr__(self):
+        return '<Post %r>' % self.title
