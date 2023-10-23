@@ -7,18 +7,20 @@ description: 网站前端（用户和后台管理）
 from flask import Flask
 
 
-def create_app(config_name):
+def create_app(config):
     app = Flask(__name__)
-    app.config.from_object(config_name)
+    app.config.from_object(config)
 
     # 注册蓝图
-    from catlog.frontend_app.main import main as main_blueprint
-    app.register_blueprint(main_blueprint)
+    if config.BLUEPRINT:
+        from catlog.frontend_app.main import main as main_blueprint
+        app.register_blueprint(main_blueprint)
 
     # 初始化数据库
-    from catlog.db import db
-    db.init_app(app)
-    with app.app_context():
-        db.create_all()
+    if config.DATABASE:
+        from catlog.db import db
+        db.init_app(app)
+        with app.app_context():
+            db.create_all()
 
     return app
